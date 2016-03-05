@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+<script src="js/apiCalls.js"></script>
 <head>
 
     <meta charset="utf-8">
@@ -131,8 +133,22 @@
     </section>
 
     <script>
-        
-        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = "Now";
+    var user = "3375847";
+    request(user);
+    </script>
+
+    <script>
+    var topSkills = getTopSkills();
+    for (let pair in topSkills){
+        skills.get(pair[0]);
+    }
+    var skill1;
+    var skill2;
+    var skill3;
+
+        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill1;
+        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill2;
+        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill3;
     </script>
 
     
@@ -562,8 +578,7 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -579,6 +594,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    
 
 </body>
 

@@ -34,6 +34,10 @@
 
 <body id="page-top" class="index">
 
+    <!--jQuery-->
+    <script src="js/jquery.js"></script>
+    <script src="js/apiCalls.js"></script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -135,26 +139,27 @@
             </div><!-- Container end-->
     </section>
 
+    <script>request(3375847);</script>
     <script>
-    var user = 3375847;
-    request(user);
+        setTimeout(
+            function() {
+                "use strict"
+                var topSkills = getTopSkills();
+                var index = 1;
+                for (let pair of topSkills) {
 
-    "use strict"
-    var topSkills = getTopSkills();
-    for (let pair in topSkills){
-        var skill1 = pair[0];
-    }
-    var skill2;
-    var skill3;
+                    // set the skill name
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].innerHTML = pair[0];
 
- //var skill1 = topSkills.get(pair[2]);
-        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill1;
-        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill2;
-        document.getElementById("top-skills").getElementsByTagName("div")[6].innerHTML = skill3;
+                    // set the skill percentage
+                    var percent = pair[1][1] * 100; 
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].setAttribute("data-percent", percent.toString());
+                    index++;
+                }
+            },
+            20);
+        
     </script>
-
-    
-
 
        <section id="additional-skills" class="parallax">
         <div class="container">
@@ -273,10 +278,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
-    
-
-    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

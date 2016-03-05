@@ -84,7 +84,8 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: url(../img/arrows.jpg);
+    height: 1024px;
 }
 
 header .container {
@@ -102,6 +103,7 @@ header .intro-text .name {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
+
     font-weight: 700;
 }
 
@@ -117,10 +119,12 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
+        color: #2c3e50;
         font-size: 4.75em;
     }
 
     header .intro-text .skills {
+        color: #2c3e50;
         font-size: 1.75em;
     }
 }

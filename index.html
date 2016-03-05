@@ -116,13 +116,13 @@
         </div>
             <div class="container">   
                 <div class="row"><!-- Toogle my skills start --> 
-                    <div class="col-md-4">
+                    <div id="top1" class="col-md-4">
                         <div class="chart" data-percent="85">Java</div>
                     </div>
-                    <div class="col-md-4">
+                    <div id="top2" class="col-md-4">
                         <div class="chart" data-percent="70">Html</div>
                     </div>
-                    <div class="col-md-4">
+                    <div id="top3" class="col-md-4">
                         <div class="chart" data-percent="60">Android</div>
                     </div>
                 </div><!-- Toogle my skills end--> 
@@ -130,6 +130,11 @@
             </div><!-- Container end-->
     </section>
 
+    <script>
+        document.getElementById("top1").setAttribute("data-percent", "100");
+    </script>
+
+    
 
 
        <section id="additional-skills" class="parallax">

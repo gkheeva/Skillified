@@ -1,3 +1,5 @@
+
+
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -189,6 +191,22 @@ section.success a:hover,
 section.success a:focus,
 section.success a:active,
 section.success a.active {
+    outline: 0;
+    color: #2c3e50;
+}
+
+
+
+section.user {
+    color: #fff;
+    background: #18bc9c;
+}
+
+section.user a,
+section.user a:hover,
+section.user a:focus,
+section.user a:active,
+section.user a.active {
     outline: 0;
     color: #2c3e50;
 }

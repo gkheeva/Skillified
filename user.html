@@ -91,13 +91,10 @@
             <div class="container">   
                 <div class="row"><!-- Toogle my skills start --> 
                     <div id="top1" class="col-md-4">
-                        <div class="chart" data-percent="85">Java</div>
                     </div>
                     <div id="top2" class="col-md-4">
-                        <div class="chart" data-percent="70">Html</div>
                     </div>
                     <div id="top3" class="col-md-4">
-                        <div class="chart" data-percent="60">Android</div>
                     </div>
                 </div><!-- Toogle my skills end--> 
             </div><!-- Container end-->
@@ -107,22 +104,42 @@
     <script>
         setTimeout(
             function() {
+
                 "use strict"
                 var topSkills = getTopSkills();
                 var index = 1;
                 for (let pair of topSkills) {
 
-                    // set the skill name
-                    document.getElementById("top" + index).getElementsByClassName("chart")[0].innerHTML = pair[0];
+                    var div = document.createElement("div");
 
-                    // set the skill percentage
+                    div.style.width = "110px";
+                    div.style.height = "110px";
+                    div.style.lineHeight= "110px";
+
+                    var classAtt = document.createAttribute("class")
+                    classAtt.value = "chart"
+
                     var percent = pair[1][1] * 100; 
-                    document.getElementById("top" + index).getElementsByClassName("chart")[0].setAttribute("data-percent", percent.toString());
+                    var dataPercentAtt = document.createAttribute("data-percent");
+                    dataPercentAtt.value = percent.toString();
+
+                    div.setAttributeNode(classAtt);
+                    div.setAttributeNode(dataPercentAtt);
+
+                    var content = document.createTextNode(pair[0]);
+                    div.appendChild(content);
+
+                    document.getElementById("top" + index.toString()).appendChild(div);
+
+                    var script = document.createElement("script");
+                    script.src = "js/drawGraph.js";
+
+                    document.body.appendChild(script);
+
                     index++;
                 }
             },
-            20);
-        
+            1000);
     </script>
 
        <section id="additional-skills" class="parallax">

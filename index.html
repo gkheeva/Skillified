@@ -32,6 +32,10 @@
 
 <body id="page-top" class="index">
 
+    <!--jQuery-->
+    <script src="js/jquery.js"></script>
+    <script src="js/apiCalls.js"></script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -130,12 +134,28 @@
             </div><!-- Container end-->
     </section>
 
+    <script>request(3375847);</script>
     <script>
-        document.getElementById("top-skills").getElementsByTagName("div")[6].setAttribute("data-percent", "100");
+        "use strict"
+
+        setTimeout(
+            function() {
+                var topSkills = getTopSkills();
+                var index = 1;
+                for (let pair of topSkills) {
+
+                    // set the skill name
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].innerHTML = pair[0];
+
+                    // set the skill percentage
+                    var percent = pair[1][1] * 100; 
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].setAttribute("data-percent", percent.toString());
+                    index++;
+                }
+            },
+            10);
+        
     </script>
-
-    
-
 
        <section id="additional-skills" class="parallax">
         <div class="container">
@@ -560,9 +580,6 @@
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

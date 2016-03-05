@@ -2965,6 +2965,11 @@ select[multiple].input-lg {
     top: 0;
   }
 }
+
+.text-padded{
+  padding-top: 100px;
+}
+
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,

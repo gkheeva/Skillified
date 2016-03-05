@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand-logo" href="#index.html">
                     <img src="img/logo.png">
                 </a>
                 <a class="navbar-brand" href="#page-top">Talent Tracker</a>
@@ -89,7 +89,7 @@
                               <input type="text" class="form-control" placeholder="Type User id">
                               <span class="input-group-btn">
                                 <li class="page-scroll">
-                                <a href="#user" class="btn btn-default" onclick="getTopSkills(this.form)" type="button">Go!</a>
+                                <a href="user.html" class="btn btn-default" onclick="getTopSkills(this.form)" type="button">Go!</a>
                               </span>
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
@@ -102,134 +102,7 @@
         </div>
     </header>
 
-    <!-- User Section -->
-    <section id="user">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Joe Kheeva</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="top-skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Top Skills</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-        </div>
-            <div class="container">   
-                <div class="row"><!-- Toogle my skills start --> 
-                    <div id="top1" class="col-md-4">
-                        <div class="chart" data-percent="85">Java</div>
-                    </div>
-                    <div id="top2" class="col-md-4">
-                        <div class="chart" data-percent="70">Html</div>
-                    </div>
-                    <div id="top3" class="col-md-4">
-                        <div class="chart" data-percent="60">Android</div>
-                    </div>
-                </div><!-- Toogle my skills end--> 
-                
-            </div><!-- Container end-->
-    </section>
-
-    <script>request(3375847);</script>
-    <script>
-        setTimeout(
-            function() {
-                "use strict"
-                var topSkills = getTopSkills();
-                var index = 1;
-                for (let pair of topSkills) {
-
-                    // set the skill name
-                    document.getElementById("top" + index).getElementsByClassName("chart")[0].innerHTML = pair[0];
-
-                    // set the skill percentage
-                    var percent = pair[1][1] * 100; 
-                    document.getElementById("top" + index).getElementsByClassName("chart")[0].setAttribute("data-percent", percent.toString());
-                    index++;
-                }
-            },
-            20);
-        
-    </script>
-
-       <section id="additional-skills" class="parallax">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Additional Skills</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-        </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <p class="lead">Java</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-              <p class="lead">Testing</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <p class="lead">Android</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="65"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-              <p class="lead">Web Design</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60"></div>
-              </div>
-            </div>
-        </div>
-    </div>
-            <div class="col-sm-6">
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <p class="lead">XML</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-              <p class="lead">C</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <p class="lead">C++</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="65"></div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-              <p class="lead">Design</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!--/#about-us-->
+    
 
     <!-- Footer -->
     <footer class="text-center">

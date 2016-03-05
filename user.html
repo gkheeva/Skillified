@@ -34,6 +34,10 @@
 
 <body id="page-top" class="index">
 
+    <!--jQuery-->
+    <script src="js/jquery.js"></script>
+    <script src="js/apiCalls.js"></script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -70,27 +74,126 @@
         <!-- /.container-fluid -->
     </nav>
 
-    
-    <!-- About Section -->
-    <section class="success" id="about">
+
+<!-- User Section -->
+
+    <!-- Portfolio Grid Section -->
+    <section id="top-skills">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 style="padding-top: 100px;">About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>At Skillified, we mainly provide budding entrepreneurs with a tool to simplify the validation process for hiring technical personnel and aid in the hiring process. We want employers to hire the best talent available.  Our solution, provides startups with a quick, easy and visually appealing tool to confirm the technical skills of the applicants.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Our tool extracts the information using the data from Stack Overflow and combines it with an algorithm to display a candidate’s Top 3 Skills, additional skills and a calculated competency. Our aim to is empower startups entrepreneurs by providing a tool that can be used to verify the competency of the applicants that will eventually help them get the value across through digital media.</p>
+                    <h2 style="padding-top: 60px; padding-bottom: 40px;">Candidate Profile</h2>
+                    <h2>Top Skills</h2>
+                    <hr class="star-primary">
                 </div>
             </div>
         </div>
+            <div class="container">   
+                <div class="row"><!-- Toogle my skills start --> 
+                    <div id="top1" class="col-md-4">
+                        <div class="chart" data-percent="85">Java</div>
+                    </div>
+                    <div id="top2" class="col-md-4">
+                        <div class="chart" data-percent="70">Html</div>
+                    </div>
+                    <div id="top3" class="col-md-4">
+                        <div class="chart" data-percent="60">Android</div>
+                    </div>
+                </div><!-- Toogle my skills end--> 
+            </div><!-- Container end-->
     </section>
 
+    <script>request(3375847);</script>
+    <script>
+        setTimeout(
+            function() {
+                "use strict"
+                var topSkills = getTopSkills();
+                var index = 1;
+                for (let pair of topSkills) {
+
+                    // set the skill name
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].innerHTML = pair[0];
+
+                    // set the skill percentage
+                    var percent = pair[1][1] * 100; 
+                    document.getElementById("top" + index).getElementsByClassName("chart")[0].setAttribute("data-percent", percent.toString());
+                    index++;
+                }
+            },
+            20);
+        
+    </script>
+
+       <section id="additional-skills" class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Additional Skills</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p class="lead">Java</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <p class="lead">Testing</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <p class="lead">Android</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="65"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <p class="lead">Web Design</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+            <div class="col-sm-6">
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p class="lead">XML</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <p class="lead">C</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <p class="lead">C++</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="65"></div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <p class="lead">Design</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#about-us-->
 
     <!-- Footer -->
     <footer class="text-center">
@@ -139,8 +242,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
-    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

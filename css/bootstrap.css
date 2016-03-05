@@ -4315,6 +4315,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1030;
 }
 @media (min-width: 768px) {
+
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -4331,11 +4332,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 19.5px 15px;
+  padding: 5px 15px;
   font-size: 19px;
   line-height: 21px;
   height: 60px;
 }
+
+
+
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;

@@ -64,6 +64,7 @@
           }
 
         }
+        
 
         // collect skills the user is competent in and calculate score
         for (let pair of competencies) {

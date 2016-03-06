@@ -124,7 +124,7 @@ $('.navbar-collapse ul li a').click(function() {
 
           if (compare) {
             var answerSkill = skills.get(pair[0]);
-            var skillLevel = answerSkill[1]/answerSkill[0];
+            var skillLevel = (answerSkill[1]/answerSkill[0])/2;
 
             var score;
             if (skillLevel >= 1) {

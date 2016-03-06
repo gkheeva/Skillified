@@ -86,7 +86,7 @@
 
                           <div class="fluid">
                             <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Type User id">
+                              <input id='search-bar' type="text" class="form-control" placeholder="Type User id">
                               <span class="input-group-btn">
                                 <li class="page-scroll">
                                 <a href="user.html" class="btn btn-default" onclick="storeId()" type="button">Go!</a>
@@ -104,7 +104,9 @@
     
     <script>
         var storeId =  function () {
-            window.localStorage.setItem("userId",document.getElementById('search-bar').value);
+            var userId = document.getElementById('search-bar').value;
+            
+            localStorage.setItem("userId", userId);
         }
     </script>
     
